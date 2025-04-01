@@ -1,13 +1,39 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+  scroll-behavior: smooth;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
+
+/*-------------------------------------------------------- Styles for Homepage -----------------------------------------------------*/
+.carousel-container {
+  max-height: 100vh; /* Adjust this value to control the max height of the carousel */
+}
+
+.carousel-image {
+  max-height: 100vh; /* Ensure the image does not exceed the container height */
+  width: 100%;
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+}
+
+button {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-family: 'Rubik', sans-serif;
+}
+
+button:hover {
+  background-color: #3b82f6; /* Tailwind blue-700 */
+  transform: scale(1.05);
+}
+
+/*---------------------------------------------Styles for Navbar and Footer----------------------------------------------------*/
+.navbar-item,
+.footer-item {
+  font-family: 'Rubik', sans-serif;
 }
